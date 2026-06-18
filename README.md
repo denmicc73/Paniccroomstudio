@@ -5,6 +5,7 @@ Web oficial de **Paniccroomstudio**, un estudio musical. La aplicación presenta
 ## 🚀 Tecnologías
 
 - **Backend:** Spring Boot (Java)
+- **Frontend:** Thymeleaf, JavaScript
 
 ## ✨ Funcionalidades
 
