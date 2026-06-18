@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producción | Panic Room</title>
+  <link rel="stylesheet" href="/css/services.css" th:href="@{/css/services.css}">
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main class="services-page">
+
+  <section class="services-hero">
+    <div class="container services-hero-inner">
+      <span class="services-kicker">Studio Services</span>
+      <h1 class="services-title">Producción</h1>
+      <p class="services-intro">
+        Creamos la música que necesitas desde cero, adaptada a tu estilo, tu voz y tu energía. Todo a medida, nada genérico.
+      </p>
+    </div>
+  </section>
+
+  <section class="services-grid-section">
+    <div class="container">
+      <div class="services-grid">
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-produccion/pad.webp}"
+                    src="/img/services-produccion/pad.webp"
+                    alt="Instrumental personalizada"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">01</span>
+            <h2 class="service-card-title">Instrumental Personalizada</h2>
+            <p class="service-card-text">
+              Creamos tu canción desde cero adaptado a tu estilo, tu voz y tu energía. Nada de usar lo de siempre: tu instrumental será única y hecha a medida.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">02</span>
+            <h2 class="service-card-title">Rework</h2>
+            <p class="service-card-text">
+              ¿Tienes una idea, maqueta o instrumental que no termina de despegar? Le damos una vuelta creativa para potenciarla al máximo sin perder tu esencia.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-produccion/teclado.webp}"
+                    src="/img/services-produccion/teclado.webp"
+                    alt="Rework de producción musical"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-produccion/asesoria.webp}"
+                    src="/img/services-produccion/asesoria.webp"
+                    alt="Asesoría creativa musical"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">03</span>
+            <h2 class="service-card-title">Asesoría Creativa</h2>
+            <p class="service-card-text">
+              Te acompañamos en el desarrollo artístico de tu proyecto: sonido, estilo, dirección musical, referencias... Te ayudamos a definir lo que quieres y a sacarle todo el jugo.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services-cta">
+    <div class="container services-cta-inner">
+      <span class="services-kicker">Let's work</span>
+      <h2 class="services-cta-title">Tu música merece sonar única</h2>
+      <p class="services-cta-text">
+        Si tienes una idea o quieres empezar desde cero, hablemos...
+      </p>
+      <a href="/#contacto" class="services-cta-btn">Contactar</a>
+    </div>
+    <div class="services-cta-actions">
+      <a th:href="@{/services-diseno}">
+        <button class="arrow-btn" aria-label="Siguiente">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="16" x2="26" y2="16"/>
+            <path d="M18 8 L26 16 L18 24"/>
+          </svg>
+        </button>
+      </a>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

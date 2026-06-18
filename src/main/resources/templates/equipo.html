@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipamiento | Panic Room</title>
+  <link rel="stylesheet" href="/css/equipo.css" th:href="@{/css/equipo.css}">
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main>
+
+  <!-- ── HERO ── -->
+  <section class="equipo-hero">
+    <p class="equipo-kicker">Studio Gear</p>
+    <h1 class="equipo-title">Equipamiento</h1>
+    <p class="equipo-intro">
+      Herramientas profesionales para cada disciplina. Audio, vídeo, producción y diseño con el gear que marca la diferencia.
+    </p>
+  </section>
+
+  <!-- ── GRID ── -->
+  <section class="equipo-section">
+    <div class="equipo-grid">
+
+      <!-- AUDIO -->
+      <div class="gear-card">
+        <div class="gear-card-num">01</div>
+        <div class="gear-card-header">
+          <span class="gear-card-index">01</span>
+          <h2 class="gear-card-title">Audio</h2>
+        </div>
+        <ul class="gear-list">
+          <li>
+            <span class="gear-label">Interfaz</span>
+            <span class="gear-value">Antelope Discrete 8 Pro Synergy Core / Antelope Zen Quadro / Focusrite Scarlett 2i2</span>
+          </li>
+          <li>
+            <span class="gear-label">Previo</span>
+            <span class="gear-value">Heritage Audio HA-73 EQ</span>
+          </li>
+          <li>
+            <span class="gear-label">Micrófono</span>
+            <span class="gear-value">Flea 47 Super FET / RODE NT1A</span>
+          </li>
+          <li>
+            <span class="gear-label">Monitores</span>
+            <span class="gear-value">Focal Alpha 50 EVO</span>
+          </li>
+          <li>
+            <span class="gear-label">Auriculares</span>
+            <span class="gear-value">Audio Technica ADX5000 / Extreme Isolation E-29 / Beyerdynamic DT 990 Pro</span>
+          </li>
+          <li>
+            <span class="gear-label">Monitor ctrl</span>
+            <span class="gear-value">Palmer Monicon M</span>
+          </li>
+          <li>
+            <span class="gear-label">Outboard</span>
+            <span class="gear-value">Softube Console 1 & Console 1 Fader / SSL UF8</span>
+          </li>
+          <li>
+            <span class="gear-label">DAW</span>
+            <span class="gear-value">FL Studio 21 / Studio One 6 / Pro Tools 2024</span>
+          </li>
+          <li>
+            <span class="gear-label">Plugins</span>
+            <span class="gear-value">Fab Filter, Waves, Softube, Plugin Alliance, Universal Audio, Metric Halo, Izotope RX</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="gear-card">
+        <div class="gear-card-num">02</div>
+        <div class="gear-card-header">
+          <span class="gear-card-index">02</span>
+          <h2 class="gear-card-title">Vídeo</h2>
+        </div>
+        <ul class="gear-list">
+          <li>
+            <span class="gear-label">Cámara</span>
+            <span class="gear-value">Sony Alpha 6400</span>
+          </li>
+          <li>
+            <span class="gear-label">Objetivos</span>
+            <span class="gear-value">Sony E11 F1.8 / Sony E15-55 F2.8 / Canon 75-300</span>
+          </li>
+          <li>
+            <span class="gear-label">Estabilizador</span>
+            <span class="gear-value">DJI Ronin-SC</span>
+          </li>
+          <li>
+            <span class="gear-label">Filtros</span>
+            <span class="gear-value">ND-55 / ND-40.5 / ND-58</span>
+          </li>
+          <li>
+            <span class="gear-label">Monitor</span>
+            <span class="gear-value">Portkeys HDH7</span>
+          </li>
+          <li>
+            <span class="gear-label">Trípode</span>
+            <span class="gear-value">Neewer extensible hasta 2M</span>
+          </li>
+          <li>
+            <span class="gear-label">DAW</span>
+            <span class="gear-value">Adobe Premiere 2023 / DaVinci Resolve Studio 2022</span>
+          </li>
+          <li>
+            <span class="gear-label">Iluminación</span>
+            <span class="gear-value">ULANZI LT003 RGB LED x2</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- PRODUCCIÓN -->
+      <div class="gear-card">
+        <div class="gear-card-num">03</div>
+        <div class="gear-card-header">
+          <span class="gear-card-index">03</span>
+          <h2 class="gear-card-title">Producción</h2>
+        </div>
+        <ul class="gear-list">
+          <li>
+            <span class="gear-label">Teclado MIDI</span>
+            <span class="gear-value">Alesis V29</span>
+          </li>
+          <li>
+            <span class="gear-label">Launch Pad</span>
+            <span class="gear-value">Novation</span>
+          </li>
+          <li>
+            <span class="gear-label">Auriculares</span>
+            <span class="gear-value">Beyerdynamics DT 990 Pro</span>
+          </li>
+          <li>
+            <span class="gear-label">Portátil</span>
+            <span class="gear-value">MacBook Air M2</span>
+          </li>
+          <li>
+            <span class="gear-label">DAW</span>
+            <span class="gear-value">FL Studio Producer Edition</span>
+          </li>
+          <li>
+            <span class="gear-label">Plugins</span>
+            <span class="gear-value">Serum, Omnisphere, Nexus, Splice</span>
+          </li>
+          <li>
+            <span class="gear-label">Sample Packs</span>
+            <span class="gear-value">Propios + de producers reconocidos</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DISEÑO -->
+      <div class="gear-card">
+        <div class="gear-card-num">04</div>
+        <div class="gear-card-header">
+          <span class="gear-card-index">04</span>
+          <h2 class="gear-card-title">Diseño</h2>
+        </div>
+        <ul class="gear-list">
+          <li>
+            <span class="gear-label">Tableta</span>
+            <span class="gear-value">Wacom 2016</span>
+          </li>
+          <li>
+            <span class="gear-label">Software</span>
+            <span class="gear-value">Adobe Photoshop 2022 / Adobe Illustrator 2022</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="equipo-cta">
+    <div class="equipo-cta-left">
+      <p class="equipo-cta-kicker">Let's work</p>
+      <h2 class="equipo-cta-title">El gear es solo el principio</h2>
+      <p class="equipo-cta-text">Lo importante es lo que hacemos con él. ¿Hablamos?</p>
+    </div>
+    <a href="/#contacto" class="btn-primary">Contactar</a>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo"><span>P</span>ANIC ROOM STUDIO</div>
+  <p class="footer-copy">© 2025 Panic Room Studio · Ibiza, España</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/panicroomstudio/?hl=es">Instagram</a>
+    <a href="https://www.tiktok.com/@panicroomstudio_">TikTok</a>
+    <a href="#">Spotify</a>
+  </div>
+</footer>
+
+</body>
+</html>

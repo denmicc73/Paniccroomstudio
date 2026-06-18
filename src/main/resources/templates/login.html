@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Panic Room Studio</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+<main class="login-page">
+    <section class="login-card">
+        <p class="login-eyebrow">Panel privado</p>
+        <h1 class="login-title">Iniciar<br>sesi&oacute;n</h1>
+
+        <form class="login-form" th:action="@{/login}" method="post">
+            <input type="hidden"
+                   th:if="${_csrf != null}"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <div class="login-field">
+                <label class="login-label" for="username">Usuario</label>
+                <input class="login-input"
+                       id="username"
+                       type="text"
+                       name="username"
+                       autocomplete="username"
+                       required>
+            </div>
+
+            <div class="login-field">
+                <label class="login-label" for="password">Contrase&ntilde;a</label>
+                <input class="login-input"
+                       id="password"
+                       type="password"
+                       name="password"
+                       autocomplete="current-password"
+                       required>
+            </div>
+
+            <button class="login-submit" type="submit">Entrar</button>
+        </form>
+
+        <p class="login-error" th:if="${param.error}">
+            Usuario o contrase&ntilde;a incorrectos
+        </p>
+    </section>
+</main>
+
+</body>
+</html>

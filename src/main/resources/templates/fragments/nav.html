@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<nav th:fragment="nav">
+    <a class="nav-logo" th:href="@{/}">
+        <img th:src="@{/img/logo.webp}" alt="Panic Room logo" class="nav-logo-img">
+        <span>PANIC ROOM</span>
+    </a>
+
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Abrir menu">
+    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="nav-menu">
+        <ul class="nav-links">
+            <li><a th:href="@{/}">Inicio</a></li>
+            <li><a href="/#servicios">Servicios</a></li>
+            <li><a th:href="@{/equipo}">Equipo</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
+        </ul>
+        <button class="nav-cta" onclick="location.href='/#contacto'">Reservar sesion</button>
+    </div>
+</nav>
+
+</body>
+</html>

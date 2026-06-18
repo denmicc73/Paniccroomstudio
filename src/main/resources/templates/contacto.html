@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto · Panic Room Studio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<section class="contact" style="min-height: 80vh; padding-top: 8rem;">
+    <div class="contact-info">
+        <p class="section-eyebrow">Hablemos</p>
+        <h2 class="section-title">RESERVA TU<br>SESIÓN</h2>
+        <div class="contact-detail">
+            <div class="contact-item">
+                <span class="contact-label">Teléfono</span>
+                <span class="contact-value">+34 680 623 847</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">clientes@panicroom.es</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">Sant Antoni de Portmany<br>07820, Ibiza</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form-wrap">
+        <p class="section-eyebrow">Cuéntanos tu proyecto</p>
+        <h2 class="section-title" style="margin-bottom: 2rem;">ESCRÍBENOS</h2>
+
+        <form th:action="@{/contacto}" th:object="${contacto}" method="post">
+
+            <div class="form-group">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input id="nombre" type="text" th:field="*{nombre}" class="form-input" placeholder="Tu nombre artístico o real" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input id="email" type="email" th:field="*{email}" class="form-input" placeholder="tu@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="mensaje">Mensaje</label>
+                <textarea id="mensaje" th:field="*{mensaje}" class="form-input" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Enviar mensaje →</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo"><span>P</span>ANIC ROOM STUDIO</div>
+    <p class="footer-copy">© 2025 Panic Room Studio · Ibiza, España</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/panicroomstudio/?hl=es">Instagram</a>
+        <a href="https://www.tiktok.com/@panicroomstudio_">TikTok</a>
+        <a href="#">Spotify</a>
+        <a th:href="@{/login}">Panel</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

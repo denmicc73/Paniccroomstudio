@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Panic Room</title>
+    <link rel="stylesheet" href="/css/services.css" th:href="@{/css/services.css}">
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main class="services-page">
+
+    <section class="services-hero">
+        <div class="container services-hero-inner">
+            <span class="services-kicker">Studio Services</span>
+            <h1 class="services-title">Servicios</h1>
+            <p class="services-intro">
+                Trabajamos cada etapa del proceso para que tu música no solo suene bien, sino con intención, identidad y acabado profesional.
+            </p>
+        </div>
+    </section>
+
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="services-grid">
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-audio/DSC00387.webp}"
+                                src="/img/services-audio/DSC00387.webp"
+                                alt="Micrófono de estudio para servicio de grabación"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">01</span>
+                        <h2 class="service-card-title">Grabación</h2>
+                        <p class="service-card-text">
+                            Capturamos tu voz o instrumento con calidad profesional en un entorno cómodo y creativo. Ya sea una maqueta o una sesión seria, lo hacemos sonar como debe.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">02</span>
+                        <h2 class="service-card-title">Mezcla</h2>
+                        <p class="service-card-text">
+                            Damos forma a tu canción para que suene clara, equilibrada y con personalidad. Nos encargamos de cada detalle para que tu música se sienta como tú quieres que se escuche.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-audio/C0004T01.webp}"
+                                src="/img/services-audio/C0004T01.webp"
+                                alt="Mesa de mezclas para servicio de mezcla"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-audio/DSC00351.webp}"
+                                src="/img/services-audio/DSC00351.webp"
+                                alt="Equipo de estudio para servicio de mastering"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">03</span>
+                        <h2 class="service-card-title">Mastering</h2>
+                        <p class="service-card-text">
+                            El toque final para que tu tema suene potente y profesional en cualquier plataforma o sistema. Brillo, pegada y coherencia, todo en su punto.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">04</span>
+                        <h2 class="service-card-title">Revisión</h2>
+                        <p class="service-card-text">
+                            ¿Tienes un tema casi listo pero sientes que le falta algo? Te damos feedback profesional sobre mezcla, estructura, energía y sonido para que puedas llevarlo al siguiente nivel.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-audio/DSC00890.webp}"
+                                src="/img/services-audio/DSC00890.webp"
+                                alt="Pantallas de producción musical para servicio de revisión"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <section class="services-cta">
+        <div class="container services-cta-inner">
+            <span class="services-kicker">Let's work</span>
+            <h2 class="services-cta-title">Tu sonido merece intención y acabado</h2>
+            <p class="services-cta-text">
+                Si ya tienes una idea, una maqueta o un tema casi cerrado...
+            </p>
+            <a href="/#contacto" class="services-cta-btn">Contactar</a>
+        </div>
+        <div class="services-cta-actions">
+            <a th:href="@{/services-video}">
+                <button class="arrow-btn" aria-label="Siguiente">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="6" y1="16" x2="26" y2="16"/>
+                        <path d="M18 8 L26 16 L18 24"/>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

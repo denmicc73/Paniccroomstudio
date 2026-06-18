@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red: #F03935;
+  --red-dark: #A32D2D;
+  --white: #F5F2EE;
+  --off-white: #D3D1C7;
+  --black: #0A0A09;
+  --dark: #111110;
+  --surface: #1A1A18;
+  --surface2: #232321;
+  --muted: #888780;
+  --accent: #EF9F27;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.equipo-hero {
+  padding: 8rem 4rem 5rem;
+  background: var(--dark);
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.equipo-hero::after {
+  content: 'GEAR';
+  position: absolute;
+  right: 2rem;
+  bottom: -1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12rem;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.equipo-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.equipo-kicker::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--red);
+}
+
+.equipo-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.equipo-intro {
+  font-size: 1rem;
+  color: var(--off-white);
+  max-width: 480px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ── GRID DE CATEGORÍAS ── */
+.equipo-section {
+  padding: 6rem 4rem;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── TARJETA ── */
+.gear-card {
+  background: var(--surface);
+  border: 0.5px solid rgba(255,255,255,0.07);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.gear-card:hover {
+  background: var(--surface2);
+  border-color: rgba(240, 57, 53, 0.3);
+}
+
+.gear-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.gear-card:hover::before {
+  transform: scaleX(1);
+}
+
+.gear-card-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  color: rgba(255,255,255,0.04);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.gear-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gear-card-index {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--red);
+}
+
+.gear-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  line-height: 1;
+}
+
+.gear-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gear-list li {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.gear-list li:last-child {
+  border-bottom: none;
+}
+
+.gear-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.1rem;
+}
+
+.gear-value {
+  color: var(--off-white);
+  font-weight: 300;
+  overflow-wrap: anywhere;
+}
+
+/* ── CTA ── */
+.equipo-cta {
+  background: var(--dark);
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.equipo-cta-left {}
+
+.equipo-cta-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.equipo-cta-kicker::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--red);
+}
+
+.equipo-cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.equipo-cta-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.btn-primary {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+
+.footer-logo span { color: var(--red); }
+
+.footer-copy {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--red); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .equipo-hero { padding: 7rem 2rem 4rem; }
+  .equipo-section { padding: 4rem 2rem; }
+  .equipo-grid { grid-template-columns: 1fr; }
+  .equipo-cta { flex-direction: column; align-items: flex-start; padding: 4rem 2rem; }
+  footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 2rem; }
+  .gear-list li { grid-template-columns: 120px 1fr; }
+}
+
+@media (max-width: 560px) {
+  .equipo-hero {
+    padding: 6.5rem 1.25rem 3rem;
+  }
+
+  .equipo-hero::after {
+    font-size: 7rem;
+    right: 0.75rem;
+  }
+
+  .equipo-section,
+  .equipo-cta {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .gear-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .gear-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gear-card-num {
+    font-size: 3.8rem;
+    right: 1rem;
+  }
+
+  .gear-list li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

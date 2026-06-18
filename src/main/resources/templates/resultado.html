@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje enviado · Panic Room Studio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<section style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; text-align: center;">
+    <p class="section-eyebrow">Gracias</p>
+    <h2 class="section-title" th:text="${mensajeExito}">Mensaje enviado correctamente</h2>
+    <p style="color: var(--clr-muted, #aaa); margin-top: 1rem; max-width: 480px;">
+        Nos pondremos en contacto contigo lo antes posible. ¡Hasta pronto!
+    </p>
+    <a th:href="@{/}" class="btn-primary" style="margin-top: 2.5rem;">Volver al inicio →</a>
+</section>
+
+<footer>
+    <div class="footer-logo"><span>P</span>ANIC ROOM STUDIO</div>
+    <p class="footer-copy">© 2025 Panic Room Studio · Ibiza, España</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/panicroomstudio/?hl=es">Instagram</a>
+        <a href="https://www.tiktok.com/@panicroomstudio_">TikTok</a>
+        <a href="#">Spotify</a>
+        <a th:href="@{/login}">Panel</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Gráfico | Panic Room</title>
+    <link rel="stylesheet" href="/css/services.css" th:href="@{/css/services.css}">
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main class="services-page">
+
+    <section class="services-hero">
+        <div class="container services-hero-inner">
+            <span class="services-kicker">Studio Services</span>
+            <h1 class="services-title">Diseño Gráfico</h1>
+            <p class="services-intro">
+                Creamos identidades visuales, portadas y piezas gráficas que representan tu esencia artística. Tu imagen, tan única como tu sonido.
+            </p>
+        </div>
+    </section>
+
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="services-grid">
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-diseno/logotipos.webp}"
+                                src="/img/services-diseno/logotipos.webp"
+                                alt="Diseño de logotipos"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">01</span>
+                        <h2 class="service-card-title">Logotipos</h2>
+                        <p class="service-card-text">
+                            Creamos identidades visuales únicas que representan tu esencia. Desde lo minimal hasta lo más experimental, tu marca empieza por un logo que hable por ti.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">02</span>
+                        <h2 class="service-card-title">Lettering / Portada</h2>
+                        <p class="service-card-text">
+                            Diseños a medida que combinan tipografía y arte para darle una imagen potente a tu proyecto musical. Tu portada será tan creativa como tu sonido.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-diseno/lettering.webp}"
+                                src="/img/services-diseno/lettering.webp"
+                                alt="Lettering y portadas musicales"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-diseno/carteleria.webp}"
+                                src="/img/services-diseno/carteleria.webp"
+                                alt="Cartelería y flyers"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">03</span>
+                        <h2 class="service-card-title">Cartelería</h2>
+                        <p class="service-card-text">
+                            Pósters, flyers y visuales para eventos o lanzamientos que no pasan desapercibidos. Impacto visual pensado para redes, impresión o lo que necesites.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--content">
+                    <div class="service-card-body">
+                        <span class="service-card-index">04</span>
+                        <h2 class="service-card-title">Personalizado</h2>
+                        <p class="service-card-text">
+                            ¿Tienes una idea especial? La traemos a la realidad con un diseño gráfico hecho a tu medida. Nos adaptamos a lo que imaginas y lo elevamos.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card--image">
+                    <div class="service-card-media">
+                        <img
+                                th:src="@{/img/services-diseno/personalizado.webp}"
+                                src="/img/services-diseno/personalizado.webp"
+                                alt="Diseño personalizado"
+                                class="service-card-img">
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="services-cta">
+        <div class="container services-cta-inner">
+            <span class="services-kicker">Let's work</span>
+            <h2 class="services-cta-title">Tu imagen merece ser tan potente como tu música</h2>
+            <p class="services-cta-text">
+                Si tienes un proyecto visual en mente, hablemos...
+            </p>
+            <a href="/#contacto" class="services-cta-btn">Contactar</a>
+        </div>
+        <div class="services-cta-actions">
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

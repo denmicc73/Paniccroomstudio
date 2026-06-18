@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Video | Panic Room</title>
+  <link rel="stylesheet" href="/css/services.css" th:href="@{/css/services.css}">
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main class="services-page">
+
+  <section class="services-hero">
+    <div class="container services-hero-inner">
+      <span class="services-kicker">Studio Services</span>
+      <h1 class="services-title">Video</h1>
+      <p class="services-intro">
+        Planificamos, rodamos y postproducimos tu proyecto visual con un enfoque creativo y profesional, de la idea al resultado final.
+      </p>
+    </div>
+  </section>
+
+  <section class="services-grid-section">
+    <div class="container">
+      <div class="services-grid">
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-video/preproduccion.webp}"
+                    src="/img/services-video/preproduccion.webp"
+                    alt="Preproducción de vídeo"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">01</span>
+            <h2 class="service-card-title">Preproducción</h2>
+            <p class="service-card-text">
+              Planificamos tu proyecto visual desde la idea inicial. Guión, storyboard, localizaciones, casting... lo dejamos todo listo para que el rodaje fluya con calidad y sin imprevistos.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">02</span>
+            <h2 class="service-card-title">Grabación</h2>
+            <p class="service-card-text">
+              Rodamos con equipos profesionales y un equipo creativo que entiende tu visión. Ya sea un videoclip, contenido para redes o algo más artístico, lo capturamos con estilo propio.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-video/grabacion.webp}"
+                    src="/img/services-video/grabacion.webp"
+                    alt="Grabación de vídeo"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-video/Postproduccion.webp}"
+                    src="/img/services-video/Postproduccion.webp"
+                    alt="Postproducción de vídeo"
+                    class="service-card-img">
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">03</span>
+            <h2 class="service-card-title">Postproducción</h2>
+            <p class="service-card-text">
+              Editamos, corregimos color, añadimos efectos y pulimos cada segundo de tu proyecto visual. Tu vídeo listo para emocionar, impactar o contar una historia como nunca antes.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--content">
+          <div class="service-card-body">
+            <span class="service-card-index">04</span>
+            <h2 class="service-card-title">Fotografía</h2>
+            <p class="service-card-text">
+              Capturamos la esencia de tu proyecto, evento o imagen personal con un enfoque artístico y profesional. Desde retratos hasta contenido para campañas y redes.
+            </p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--image">
+          <div class="service-card-media">
+            <img
+                    th:src="@{/img/services-video/Fotografia.webp}"
+                    src="/img/services-video/Fotografia.webp"
+                    alt="Fotografía profesional"
+                    class="service-card-img">
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services-cta">
+    <div class="container services-cta-inner">
+      <span class="services-kicker">Let's work</span>
+      <h2 class="services-cta-title">Tu visión merece ser contada con estilo</h2>
+      <p class="services-cta-text">
+        Si tienes un proyecto visual en mente, hablemos...
+      </p>
+      <a href="/#contacto" class="services-cta-btn">Contactar</a>
+    </div>
+    <div class="services-cta-actions">
+      <a th:href="@{/services-produccion}">
+        <button class="arrow-btn" aria-label="Siguiente">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="16" x2="26" y2="16"/>
+            <path d="M18 8 L26 16 L18 24"/>
+          </svg>
+        </button>
+      </a>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

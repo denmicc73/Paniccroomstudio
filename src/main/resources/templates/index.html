@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panic Room Studio · Ibiza</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+</head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+<!-- ── HERO ── -->
+<section class="hero">
+    <div class="hero-left">
+        <img th:src="@{/img/logo.webp}" alt="Panic Room" class="hero-logo">
+        <p class="hero-tag">Estudio 360° · Ibiza</p>
+        <h1 class="hero-title">
+            TU REFUGIO<br>
+            <span class="line2">CREATIVO</span>
+        </h1>
+        <p class="hero-subtitle">
+            Estudio artístico y musical donde la música, las ideas y la expresión
+            auténtica tienen un espacio seguro para crecer.
+        </p>
+        <div class="hero-actions">
+            <a href="#servicios" class="btn-primary">Ver servicios</a>
+            <a href="#contacto" class="btn-ghost">Hablar con nosotros</a>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="hero-bg-img"></div>
+        <div class="hero-overlay-text">PR</div>
+    </div>
+
+    <div class="hero-stats">
+        <div class="stat">
+            <span class="stat-num">360°</span>
+            <span class="stat-label">Cobertura artística</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Disciplinas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-num">IBZ</span>
+            <span class="stat-label">Sant Antoni, Ibiza</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+    <div class="ticker-inner">
+        <span class="ticker-item">Grabación<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Mezcla &amp; Mastering<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Producción Musical<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Videoclips<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Diseño Gráfico<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Identidad Visual<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Ibiza · España<span class="ticker-dot"></span></span>
+        <!-- duplicado para loop continuo -->
+        <span class="ticker-item">Grabación<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Mezcla &amp; Mastering<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Producción Musical<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Videoclips<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Diseño Gráfico<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Identidad Visual<span class="ticker-dot"></span></span>
+        <span class="ticker-item">Ibiza · España<span class="ticker-dot"></span></span>
+    </div>
+</div>
+<!-- ── ABOUT ── -->
+<section class="about">
+
+    <div class="about-visual">
+
+        <div id="aboutCarousel"
+             class="carousel slide"
+             data-bs-ride="carousel"
+             data-bs-interval="3000"
+             data-bs-pause="false">
+
+            <div class="carousel-inner h-100">
+
+                <div class="carousel-item active h-100">
+                    <img th:src="@{/img/about/studio1.webp}"
+                         class="d-block w-100 about-carousel-img"
+                         alt="Estudio principal">
+                </div>
+
+                <div class="carousel-item h-100">
+                    <img th:src="@{/img/about/studio2.webp}"
+                         class="d-block w-100 about-carousel-img"
+                         alt="Zona creativa">
+                </div>
+
+                <div class="carousel-item h-100">
+                    <img th:src="@{/img/about/studio3.webp}"
+                         class="d-block w-100 about-carousel-img"
+                         alt="Producción musical">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#aboutCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#aboutCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+        </div>
+        <p class="about-img-label">
+            Estudio principal · Ibiza
+        </p>
+
+    </div>
+
+    <div class="about-content">
+        <p class="section-eyebrow">Sobre nosotros</p>
+
+        <h2 class="section-title">
+            MÁS QUE UN<br>ESTUDIO
+        </h2>
+
+        <p class="section-body">
+            Nacimos en Ibiza con una misión clara: acompañar a artistas en cada paso
+            de su camino, desde la chispa inicial hasta el lanzamiento profesional.
+            <br><br>
+            Ya sea que vengas a grabar, mezclar, crear o simplemente a inspirarte,
+            aquí vas a encontrar un equipo que cree en ti tanto como tú en tu arte.
+        </p>
+
+        <div class="location-badge">
+            <span class="location-dot"></span>
+            Sant Antoni de Portmany, Ibiza · 07820
+        </div>
+    </div>
+
+</section>
+<!-- ── SERVICIOS ── -->
+<section class="services" id="servicios">
+    <div class="services-header">
+        <div>
+            <p class="section-eyebrow">Lo que hacemos</p>
+            <h2 class="section-title">SERVICIOS</h2>
+        </div>
+        <a href="#contacto" class="btn-ghost">Solicitar presupuesto</a>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <p class="service-num">01</p>
+            <h3 class="service-name">AUDIO</h3>
+            <p class="service-desc">
+                Grabación, mezcla y mastering con calidad profesional. Adaptado al
+                estilo de cada artista — rap, techno, flamenco.
+            </p>
+            <a th:href="@{/services-audio}" class="service-link">Saber más →</a>
+        </div>
+
+        <div class="service-card">
+            <p class="service-num">02</p>
+            <h3 class="service-name">VIDEO</h3>
+            <p class="service-desc">
+                Videoclips, contenido para redes, concepto, guión, rodaje, estilismo,
+                edición y color. De la idea al píxel.
+            </p>
+            <a th:href="@{/services-video}" class="service-link">Saber más →</a>
+        </div>
+
+        <div class="service-card">
+            <p class="service-num">03</p>
+            <h3 class="service-name">PRODUCCIÓN</h3>
+            <p class="service-desc">
+                Creamos la instrumental que tu canción necesita. Bases únicas desde
+                cero, con arreglos que potencian tu voz.
+            </p>
+            <a th:href="@{/services-produccion}" class="service-link">Saber más →</a>
+        </div>
+
+        <div class="service-card">
+            <p class="service-num">04</p>
+            <h3 class="service-name">DISEÑO</h3>
+            <p class="service-desc">
+                Portadas, logotipos, identidades visuales y contenido para redes con
+                estética y concepto artístico propio.
+            </p>
+            <a th:href="@{/services-diseno}" class="service-link">Saber más →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── PROCESO ── -->
+<section class="process">
+    <div class="process-bg-num">360</div>
+    <p class="section-eyebrow">Cómo trabajamos</p>
+    <h2 class="section-title">EL PROCESO</h2>
+
+    <div class="process-grid">
+        <div class="process-step">
+            <p class="step-num">01</p>
+            <h3 class="step-title">PRIMERA SESIÓN</h3>
+            <p class="step-body">
+                Nos reunimos para entender tu visión, estilo y objetivos. Aquí nace
+                el plan creativo a medida.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="step-num">02</p>
+            <h3 class="step-title">PRODUCCIÓN</h3>
+            <p class="step-body">
+                Grabamos, producimos, filmamos o diseñamos. Todo bajo el mismo techo,
+                con total control creativo.
+            </p>
+        </div>
+
+        <div class="process-step">
+            <p class="step-num">03</p>
+            <h3 class="step-title">LANZAMIENTO</h3>
+            <p class="step-body">
+                Entregamos el proyecto finalizado, listo para publicar. Tú decides
+                cuándo el mundo lo escucha.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section class="contact" id="contacto">
+    <div class="contact-info">
+        <p class="section-eyebrow">Hablemos</p>
+        <h2 class="section-title">RESERVA TU<br>SESIÓN</h2>
+        <div class="contact-detail">
+            <div class="contact-item">
+                <span class="contact-label">Teléfono</span>
+                <span class="contact-value">+34 680 623 847</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">clientes@panicroom.es</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">Sant Antoni de Portmany<br>07820, Ibiza</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Instagram</span>
+                <span class="contact-value">@panicroomstudio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form-wrap">
+        <p class="section-eyebrow">Cuéntanos tu proyecto</p>
+        <h2 class="section-title" style="margin-bottom: 2rem;">ESCRÍBENOS</h2>
+
+        <form th:action="@{/contacto}" method="post">
+
+        <div class="form-group">
+            <label class="form-label" for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre" class="form-input" placeholder="Tu nombre artístico o real" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input id="email" type="email" name="email" class="form-input" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" class="form-input">
+                <option value="" disabled selected>¿Qué necesitas?</option>
+                <option>Audio (Grabación / Mezcla / Mastering)</option>
+                <option>Video (Videoclip / Contenido)</option>
+                <option>Producción Musical</option>
+                <option>Diseño Gráfico</option>
+                <option>Pack completo 360°</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-input" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Enviar mensaje →</button>
+
+        </form>
+    </div>
+</section>
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
+    <div class="cookie-banner__box">
+        <p class="cookie-banner__eyebrow">Privacidad</p>
+        <h2 id="cookieTitle">Usamos cookies solo si tú quieres</h2>
+        <p class="cookie-banner__text">
+            Utilizamos cookies técnicas necesarias para el funcionamiento del sitio. Solo activaremos cookies de análisis o seguimiento si las aceptas.
+            Puedes consultar más información en la <a th:href="@{/cookies}">Política de Cookies</a>
+        </p>
+
+        <div class="cookie-banner__actions">
+            <button id="acceptCookies" class="btn-primary" type="button">Aceptar</button>
+            <button id="rejectCookies" class="btn-ghost" type="button">Rechazar</button>
+        </div>
+    </div>
+</div>
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-logo"><span>P</span>ANIC ROOM STUDIO</div>
+    <p class="footer-copy">© 2025 Panic Room Studio · Ibiza, España</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/panicroomstudio/?hl=es">Instagram</a>
+        <a href="https://www.tiktok.com/@panicroomstudio_">TikTok</a>
+        <a href="#">Spotify</a>
+        <a th:href="@{/login}">Panel</a>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/hero-logo.js}"></script>
+<script th:src="@{/js/pop-up.js}"></script>
+</body>
+</html>

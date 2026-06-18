@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Contactos | Panic Room Studio</title>
+    <link rel="stylesheet" th:href="@{/css/admin-contactos.css}">
+</head>
+<body>
+
+<main class="admin-page">
+    <header class="admin-header">
+        <div>
+            <p class="admin-eyebrow">Panel privado</p>
+            <h1 class="admin-title">Contactos</h1>
+        </div>
+        <form th:action="@{/logout}" method="post">
+            <button class="admin-logout" type="submit">Salir</button>
+        </form>
+    </header>
+
+    <section class="dashboard" aria-labelledby="dashboardTitle">
+        <div class="section-heading">
+            <p class="admin-eyebrow">Dashboard</p>
+            <h2 id="dashboardTitle" class="section-title">Datos generales</h2>
+        </div>
+
+        <div class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-label">Mensajes</span>
+                <strong class="stat-value" th:text="${totalContactos}">0</strong>
+                <span class="stat-detail">Recibidos desde la web</span>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">Emails únicos</span>
+                <strong class="stat-value" th:text="${emailsUnicos}">0</strong>
+                <span class="stat-detail">Contactos distintos</span>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">Media mensaje</span>
+                <strong class="stat-value">
+                    <span th:text="${longitudMedia}">0</span><small>car.</small>
+                </strong>
+                <span class="stat-detail">Longitud aproximada</span>
+            </article>
+
+            <article class="stat-card stat-card--highlight">
+                <span class="stat-label">Último contacto</span>
+                <strong class="stat-name"
+                        th:text="${ultimoContacto != null ? ultimoContacto.nombre : 'Sin mensajes'}">Sin mensajes</strong>
+                <span class="stat-detail"
+                      th:text="${ultimoContacto != null ? ultimoContacto.email : 'Todavía no hay contactos'}">Todavía no hay contactos</span>
+            </article>
+        </div>
+
+        <div class="charts-grid">
+            <article class="chart-panel">
+                <div class="chart-head">
+                    <h3>Actividad</h3>
+                    <span th:text="${totalContactos + ' mensajes'}">0 mensajes</span>
+                </div>
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <span>Total</span>
+                        <div class="bar-track">
+                            <div class="bar-fill"
+                                 th:style="'width: ' + ${actividadPorcentaje} + '%'"></div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Únicos</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-fill--accent"
+                                 th:style="'width: ' + ${emailsUnicosPorcentaje} + '%'"></div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Texto</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-fill--muted"
+                                 th:style="'width: ' + ${textoPorcentaje} + '%'"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="chart-panel chart-panel--summary">
+                <h3>Resumen</h3>
+                <p>
+                    Hay <strong th:text="${totalContactos}">0</strong> mensajes registrados y
+                    <strong th:text="${emailsUnicos}">0</strong> emails únicos.
+                </p>
+                <div class="summary-ring">
+                    <span th:text="${totalContactos}">0</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="messages" aria-labelledby="messagesTitle">
+        <div class="section-heading section-heading--inline">
+            <div>
+                <p class="admin-eyebrow">Mensajes</p>
+                <h2 id="messagesTitle" class="section-title">Bandeja de entrada</h2>
+            </div>
+            <span class="messages-count" th:text="${totalContactos + ' total'}">0 total</span>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Mensaje</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="c : ${contactos}">
+                    <td th:text="${c.id}"></td>
+                    <td th:text="${c.nombre}"></td>
+                    <td>
+                        <a th:href="'mailto:' + ${c.email}" th:text="${c.email}"></a>
+                    </td>
+                    <td th:text="${c.mensaje}"></td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(contactos)}">
+                    <td colspan="4" class="empty-state">Todavía no hay mensajes.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
